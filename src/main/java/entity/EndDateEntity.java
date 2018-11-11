@@ -22,16 +22,28 @@ public class EndDateEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "expecting_date")
     public Timestamp getExpectingDate() {
         return expectingDate;
     }
 
+    public void setExpectingDate(Timestamp expectingDate) {
+        this.expectingDate = expectingDate;
+    }
+
     @Basic
     @Column(name = "state")
     public Boolean getState() {
         return state;
+    }
+
+    public void setState(Boolean state) {
+        this.state = state;
     }
 
     @Override
@@ -62,12 +74,19 @@ public class EndDateEntity {
         return dealById;
     }
 
+    public void setDealById(DealEntity dealById) {
+        this.dealById = dealById;
+    }
+
     @OneToOne
     @JoinColumn(name = "lot", referencedColumnName = "id", nullable = false)
     public LotEntity getLotByLot() {
         return lotByLot;
     }
 
+    public void setLotByLot(LotEntity lotByLot) {
+        this.lotByLot = lotByLot;
+    }
     public static Builder newBuilder(){
         return new EndDateEntity().new Builder();
     }

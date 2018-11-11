@@ -22,10 +22,18 @@ public class PaintingEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "name")
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Basic
@@ -34,16 +42,28 @@ public class PaintingEntity {
         return author;
     }
 
+    public void setauthor(String author) {
+        this.author = author;
+    }
+
     @Basic
     @Column(name = "description")
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Basic
     @Column(name = "img")
     public String getImg() {
         return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     @Override
@@ -75,6 +95,10 @@ public class PaintingEntity {
     @OneToMany(mappedBy = "paintingByPainting")
     public Collection<LotEntity> getLotsById() {
         return lotsById;
+    }
+
+    public void setLotsById(Collection<LotEntity> lotsById) {
+        this.lotsById = lotsById;
     }
 
     public static Builder newBuilder(){

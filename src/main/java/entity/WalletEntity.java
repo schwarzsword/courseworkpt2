@@ -21,10 +21,18 @@ public class WalletEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "balance")
     public Long getBalance() {
         return balance;
+    }
+
+    public void setBalance(Long balance) {
+        this.balance = balance;
     }
 
     @Override
@@ -52,15 +60,27 @@ public class WalletEntity {
         return paymentsByIdSource;
     }
 
+    public void setPaymentsByIdSource(Collection<PaymentEntity> paymentsByIdSource) {
+        this.paymentsByIdSource = paymentsByIdSource;
+    }
+
     @OneToMany(mappedBy = "walletByDestination")
     public Collection<PaymentEntity> getPaymentsByIdDestination() {
         return paymentsByIdDestination;
+    }
+
+    public void setPaymentsByIdDestination(Collection<PaymentEntity> paymentsByIdDestination) {
+        this.paymentsByIdDestination = paymentsByIdDestination;
     }
 
     @OneToOne
     @JoinColumn(name = "owner", referencedColumnName = "id", nullable = false)
     public UsersEntity getUserByOwner() {
         return userByOwner;
+    }
+
+    public void setUserByOwner(UsersEntity userByOwner) {
+        this.userByOwner = userByOwner;
     }
 
     public static Builder newBuilder(){
