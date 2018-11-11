@@ -6,19 +6,28 @@ import java.sql.Timestamp;
 
 public class Main {
     public static void main(String[] args){
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DatabaseConfig.class);
+//        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DatabaseConfig.class);
+//
+//        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
+//        RegistrationEntity registrationEntity = new RegistrationEntity();
+//        registrationEntity.setLogin("user1");
+//        registrationEntity.setPassword("qwerty");
+//        registrationEntity.setId(1);
+//        RegistrationEntity registrationEntity2 = new RegistrationEntity();
+//        registrationEntity2.setLogin("user2");
+//        registrationEntity2.setPassword("qwerty");
+//        registrationEntity2.setId(2);
+//        registrationRepository.save(registrationEntity);
+//        registrationRepository.save(registrationEntity2);
 
-        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
-        RegistrationEntity registrationEntity = new RegistrationEntity();
-        registrationEntity.setLogin("user1");
-        registrationEntity.setPassword("qwerty");
-        registrationEntity.setId(1);
-        RegistrationEntity registrationEntity2 = new RegistrationEntity();
-        registrationEntity2.setLogin("user2");
-        registrationEntity2.setPassword("qwerty");
-        registrationEntity2.setId(2);
-        registrationRepository.save(registrationEntity);
-        registrationRepository.save(registrationEntity2);
+
+        //HOW TO USE BUILDERS
+
+        DealEntity a = DealEntity.newBuilder()
+                .setId(1234)
+                .build();
+
+
 
 //        PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
 //        PaintingEntity paintingEntity = new PaintingEntity();
