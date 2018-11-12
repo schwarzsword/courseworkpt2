@@ -2,6 +2,8 @@ package entity;
 
 import javax.persistence.*;
 
+
+
 @Entity
 @Table(name = "deal", schema = "public", catalog = "s243884")
 public class DealEntity {
