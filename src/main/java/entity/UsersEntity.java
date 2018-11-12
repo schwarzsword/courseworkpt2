@@ -28,10 +28,18 @@ public class UsersEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "name")
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Basic
@@ -40,10 +48,18 @@ public class UsersEntity {
         return surname;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     @Basic
     @Column(name = "mail")
     public String getMail() {
         return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     @Basic
@@ -52,10 +68,18 @@ public class UsersEntity {
         return phone;
     }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Basic
     @Column(name = "role")
     public Role getRole() {
         return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override
@@ -91,10 +115,18 @@ public class UsersEntity {
         return dealsById;
     }
 
+    public void setDealsById(Collection<DealEntity> dealsById) {
+        this.dealsById = dealsById;
+    }
+
     @OneToOne
     @JoinColumn(name = "regist", referencedColumnName = "id", nullable = false)
     public RegistrationEntity getRegistrationByRegist() {
         return registrationByRegist;
+    }
+
+    public void setRegistrationByRegist(RegistrationEntity registrationByRegist) {
+        this.registrationByRegist = registrationByRegist;
     }
 
     @OneToOne(mappedBy = "userByOwner")
@@ -102,10 +134,16 @@ public class UsersEntity {
         return walletById;
     }
 
+    public void setWalletById(WalletEntity walletById) {
+        this.walletById = walletById;
+    }
+
     @OneToMany(mappedBy = "sellerByUsers")
     public Collection<LotEntity> getLotsById() {
         return lotsById;
     }
+
+    public void setLotsById(Collection<LotEntity> lotsById) {this.lotsById = lotsById;}
 
     public static Builder newBuilder(){
         return new UsersEntity().new Builder();
