@@ -12,12 +12,12 @@ public class DealEntity {
     private UsersEntity usersByCustomer;
     private PaymentEntity paymentByPayment;
 
-    private DealEntity(){
+    public DealEntity(){
         //private constructor
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "deal_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

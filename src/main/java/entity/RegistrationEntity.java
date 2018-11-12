@@ -11,10 +11,10 @@ public class RegistrationEntity {
     private String password;
     private UsersEntity userByRegist;
 
-    private RegistrationEntity(){}//private constructor
+    public RegistrationEntity(){}//private constructor
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "registration_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

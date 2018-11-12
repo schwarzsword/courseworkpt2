@@ -12,10 +12,10 @@ public class PaymentEntity {
     private WalletEntity walletBySource;
     private WalletEntity walletByDestination;
 
-    private PaymentEntity(){}//private constructor
+    public PaymentEntity(){}//private constructor
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

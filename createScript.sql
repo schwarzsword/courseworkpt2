@@ -4,7 +4,7 @@ create type state as enum ('on_admin_verifying', 'on_expert_verifying', 'on_mark
 create table painting(
 id serial primary key,
 name varchar(50),
-autor varchar(50),
+author varchar(50),
 description text,
 img text
 );

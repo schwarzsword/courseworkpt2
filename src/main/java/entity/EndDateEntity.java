@@ -13,10 +13,10 @@ public class EndDateEntity {
     private DealEntity dealById;
     private LotEntity lotByLot;
 
-    private EndDateEntity(){} //private constructor
+    public EndDateEntity(){} //private constructor
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "end_date_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

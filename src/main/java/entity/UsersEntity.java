@@ -16,13 +16,13 @@ public class UsersEntity {
     private RegistrationEntity registrationByRegist;
     private Collection<LotEntity> lotsById;
 
-    private UsersEntity(){}//private constructor
+    public UsersEntity(){}//private constructor
 
     @Enumerated(EnumType.STRING)
     private Role role;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

@@ -6,37 +6,34 @@ import java.sql.Timestamp;
 
 public class Main {
     public static void main(String[] args){
-//        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DatabaseConfig.class);
-//
-//        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
-//        RegistrationEntity registrationEntity = new RegistrationEntity();
-//        registrationEntity.setLogin("user1");
-//        registrationEntity.setPassword("qwerty");
-//        registrationEntity.setId(1);
-//        RegistrationEntity registrationEntity2 = new RegistrationEntity();
-//        registrationEntity2.setLogin("user2");
-//        registrationEntity2.setPassword("qwerty");
-//        registrationEntity2.setId(2);
-//        registrationRepository.save(registrationEntity);
-//        registrationRepository.save(registrationEntity2);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DatabaseConfig.class);
 
-
-        //HOW TO USE BUILDERS
-
-        DealEntity a = DealEntity.newBuilder()
-                .setId(1234)
+        PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
+        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
+                .setName("testart2")
+                .setAuthor("testauthor2")
+                .setDescription("testDescription2")
+                .setImg("testlink2")
                 .build();
+        paintingRepository.save(paintingEntity);
 
+        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
+        RegistrationEntity registrationEntity = RegistrationEntity.newBuilder()
+                .setLogin("testuser3")
+                .setPassword("qwerty")
+                .build();
+        RegistrationEntity registrationEntity2 = RegistrationEntity.newBuilder()
+                .setLogin("testuser4")
+                .setPassword("qwerty")
+                .build();
+        registrationRepository.save(registrationEntity);
+        registrationRepository.save(registrationEntity2);
 
+        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
+        UsersEntity usersEntity = UsersEntity.newBuilder()
+                .build();
+        usersRepository.save(usersEntity);
 
-//        PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
-//        PaintingEntity paintingEntity = new PaintingEntity();
-//        paintingEntity.setName("Девятый вал");
-//        paintingEntity.setAutor("Айвазовский");
-//        paintingEntity.setDescription("Картина в художника-мариниста \"Девятый вал\"");
-//        paintingEntity.setImg("https://www.google.ru/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjDgvi_uMzeAhWFiCwKHV7fDiwQjRx6BAgBEAU&url=http%3A%2F%2Fayvazovskiy.su%2F9-%25D0%25B2%25D0%25B0%25D0%25BB%2F&psig=AOvVaw3pBWZ_W5I0e9xX65q_MMfI&ust=1542029182237486");
-//        paintingRepository.save(paintingEntity);
-//
 //        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
 //        UsersEntity usersEntity1 = new UsersEntity();
 //        usersEntity1.setName("name1");

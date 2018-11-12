@@ -15,7 +15,7 @@ public class LotEntity {
     private UsersEntity sellerByUsers;
 
 
-    private LotEntity(){
+    public LotEntity(){
         //private constructor
     }
 
@@ -23,7 +23,7 @@ public class LotEntity {
     private State state;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lot_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;

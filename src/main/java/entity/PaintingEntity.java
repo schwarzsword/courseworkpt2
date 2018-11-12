@@ -7,16 +7,16 @@ import java.util.Collection;
 @Table(name = "painting", schema = "public", catalog = "s243884")
 public class PaintingEntity {
     private int id;
-    private String name;
-    private String author;
-    private String description;
-    private String img;
+    private String name = "Unknown";
+    private String author = "Unknown";
+    private String description = "Description unknown";
+    private String img = "Image unknown";
     private Collection<LotEntity> lotsById;
 
-    private PaintingEntity(){} //private constructor
+    public PaintingEntity(){} //private constructor
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "painting_id_seq")
     @Column(name = "id")
     public int getId() {
         return id;
@@ -38,12 +38,12 @@ public class PaintingEntity {
 
     @Basic
     @Column(name = "author")
-    public String getauthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public void setauthor(String author) {
-        this.author = author;
+    public void setAuthor(String autor) {
+        this.author = autor;
     }
 
     @Basic
@@ -114,8 +114,8 @@ public class PaintingEntity {
             return this;
         }
 
-        public Builder setAuthor(String author){
-            PaintingEntity.this.author = author;
+        public Builder setAuthor(String autor){
+            PaintingEntity.this.author = autor;
 
             return this;
         }
@@ -149,6 +149,7 @@ public class PaintingEntity {
             pict.id = PaintingEntity.this.id;
             pict.name = PaintingEntity.this.name;
             pict.author = PaintingEntity.this.author;
+            pict.img=PaintingEntity.this.img;
             pict.description = PaintingEntity.this.description;
             pict.lotsById = PaintingEntity.this.lotsById;
 
