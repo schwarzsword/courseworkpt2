@@ -1,10 +1,13 @@
 package entity;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
 @Table(name = "payment", schema = "public", catalog = "s243884")
+@EqualsAndHashCode
 public class PaymentEntity {
     private int id;
     private Long sum;
@@ -35,25 +38,25 @@ public class PaymentEntity {
         this.sum = sum;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        PaymentEntity that = (PaymentEntity) o;
-
-        if (id != that.id) return false;
-        if (sum != null ? !sum.equals(that.sum) : that.sum != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (sum != null ? sum.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        PaymentEntity that = (PaymentEntity) o;
+//
+//        if (id != that.id) return false;
+//        if (sum != null ? !sum.equals(that.sum) : that.sum != null) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (sum != null ? sum.hashCode() : 0);
+//        return result;
+//    }
 
     @OneToOne(mappedBy = "paymentByPayment")
     public DealEntity getDealById() {

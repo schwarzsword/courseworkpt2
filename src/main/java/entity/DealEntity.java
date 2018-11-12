@@ -1,11 +1,12 @@
 package entity;
 
 import javax.persistence.*;
-
+import lombok.*;
 
 
 @Entity
 @Table(name = "deal", schema = "public", catalog = "s243884")
+@EqualsAndHashCode
 public class DealEntity {
     private int id;
     private EndDateEntity endDateBySoldDate;
@@ -27,23 +28,23 @@ public class DealEntity {
         this.id = id;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        DealEntity that = (DealEntity) o;
-
-        if (id != that.id) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        DealEntity that = (DealEntity) o;
+//
+//        if (id != that.id) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        return result;
+//    }
 
     @OneToOne
     @JoinColumn(name = "sold_date", referencedColumnName = "id")

@@ -19,20 +19,21 @@ public class Main {
 
         RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
         RegistrationEntity registrationEntity = RegistrationEntity.newBuilder()
-                .setLogin("testuser3")
+                .setLogin("testuser1311")
                 .setPassword("qwerty")
                 .build();
         RegistrationEntity registrationEntity2 = RegistrationEntity.newBuilder()
-                .setLogin("testuser4")
+                .setLogin("testuser4112")
                 .setPassword("qwerty")
                 .build();
         registrationRepository.save(registrationEntity);
         registrationRepository.save(registrationEntity2);
 
-        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
-        UsersEntity usersEntity = UsersEntity.newBuilder()
-                .build();
-        usersRepository.save(usersEntity);
+//        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
+//        UsersEntity usersEntity = UsersEntity.newBuilder()
+//                .setRegistration(registrationEntity)
+//                .build();
+//        usersRepository.save(usersEntity);
 
 //        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
 //        UsersEntity usersEntity1 = new UsersEntity();

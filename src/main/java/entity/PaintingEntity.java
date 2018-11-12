@@ -1,10 +1,13 @@
 package entity;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
 @Table(name = "painting", schema = "public", catalog = "s243884")
+@EqualsAndHashCode
 public class PaintingEntity {
     private int id;
     private String name = "Unknown";
@@ -66,31 +69,31 @@ public class PaintingEntity {
         this.img = img;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        PaintingEntity that = (PaintingEntity) o;
-
-        if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (author != null ? !author.equals(that.author) : that.author != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (img != null ? !img.equals(that.img) : that.img != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (img != null ? img.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        PaintingEntity that = (PaintingEntity) o;
+//
+//        if (id != that.id) return false;
+//        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+//        if (author != null ? !author.equals(that.author) : that.author != null) return false;
+//        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+//        if (img != null ? !img.equals(that.img) : that.img != null) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + (author != null ? author.hashCode() : 0);
+//        result = 31 * result + (description != null ? description.hashCode() : 0);
+//        result = 31 * result + (img != null ? img.hashCode() : 0);
+//        return result;
+//    }
 
     @OneToMany(mappedBy = "paintingByPainting")
     public Collection<LotEntity> getLotsById() {
