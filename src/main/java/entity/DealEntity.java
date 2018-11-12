@@ -17,7 +17,7 @@ public class DealEntity {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "deal_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -125,7 +125,5 @@ public class DealEntity {
 
 
     }
-
-
 
 }

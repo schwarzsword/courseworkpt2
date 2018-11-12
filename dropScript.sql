@@ -11,3 +11,4 @@ drop table painting cascade ;
 
 drop type role;
 drop type state;
+drop sequence hibernate_sequence;

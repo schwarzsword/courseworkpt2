@@ -23,7 +23,7 @@ public class LotEntity {
     private State state;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lot_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;

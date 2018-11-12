@@ -14,7 +14,7 @@ public class RegistrationEntity {
     public RegistrationEntity(){}//private constructor
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "registration_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
