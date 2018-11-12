@@ -23,6 +23,10 @@ public class DealEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -47,16 +51,28 @@ public class DealEntity {
         return endDateBySoldDate;
     }
 
+    public void setEndDateBySoldDate(EndDateEntity endDateBySoldDate) {
+        this.endDateBySoldDate = endDateBySoldDate;
+    }
+
     @ManyToOne
     @JoinColumn(name = "customer", referencedColumnName = "id")
     public UsersEntity getUsersByCustomer() {
         return usersByCustomer;
     }
 
+    public void setUsersByCustomer(UsersEntity usersByCustomer) {
+        this.usersByCustomer = usersByCustomer;
+    }
+
     @OneToOne
     @JoinColumn(name = "payment", referencedColumnName = "id", nullable = false)
     public PaymentEntity getPaymentByPayment() {
         return paymentByPayment;
+    }
+
+    public void setPaymentByPayment(PaymentEntity paymentByPayment) {
+        this.paymentByPayment = paymentByPayment;
     }
 
     //method creating new builder

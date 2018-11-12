@@ -21,10 +21,18 @@ public class PaymentEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "sum")
     public Long getSum() {
         return sum;
+    }
+
+    public void setSum(Long sum) {
+        this.sum = sum;
     }
 
     @Override
@@ -52,16 +60,28 @@ public class PaymentEntity {
         return dealById;
     }
 
+    public void setDealById(DealEntity dealById) {
+        this.dealById = dealById;
+    }
+
     @ManyToOne
     @JoinColumn(name = "source", referencedColumnName = "id", nullable = false)
     public WalletEntity getWalletBySource() {
         return walletBySource;
     }
 
+    public void setWalletBySource(WalletEntity walletBySource) {
+        this.walletBySource = walletBySource;
+    }
+
     @ManyToOne
     @JoinColumn(name = "destination", referencedColumnName = "id", nullable = false)
     public WalletEntity getWalletByDestination() {
         return walletByDestination;
+    }
+
+    public void setWalletByDestination(WalletEntity walletByDestination) {
+        this.walletByDestination = walletByDestination;
     }
 
     public static Builder newBuilder(){

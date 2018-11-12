@@ -29,10 +29,18 @@ public class LotEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Basic
     @Column(name = "start_date")
     public Timestamp getStartDate() {
         return startDate;
+    }
+
+    public void setStartDate(Timestamp startDate) {
+        this.startDate = startDate;
     }
 
     @Basic
@@ -41,10 +49,18 @@ public class LotEntity {
         return state;
     }
 
+    public void setState(State state) {
+        this.state = state;
+    }
+
     @Basic
     @Column(name = "start_price")
     public Long getStartPrice() {
         return startPrice;
+    }
+
+    public void setStartPrice(Long startPrice) {
+        this.startPrice = startPrice;
     }
 
     @Override
@@ -76,16 +92,28 @@ public class LotEntity {
         return endDateById;
     }
 
+    public void setEndDateById(EndDateEntity endDateById) {
+        this.endDateById = endDateById;
+    }
+
     @ManyToOne
     @JoinColumn(name = "painting", referencedColumnName = "id", nullable = false)
     public PaintingEntity getPaintingByPainting() {
         return paintingByPainting;
     }
 
+    public void setPaintingByPainting(PaintingEntity paintingByPainting) {
+        this.paintingByPainting = paintingByPainting;
+    }
+
     @ManyToOne
     @JoinColumn(name = "seller", referencedColumnName = "id", nullable = false)
     public UsersEntity getSellerByUsers() {
         return sellerByUsers;
+    }
+
+    public void setSellerByUsers(UsersEntity sellerByUsers) {
+        this.sellerByUsers = sellerByUsers;
     }
 
     public static Builder newBuilder(){
