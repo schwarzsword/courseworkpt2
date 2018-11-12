@@ -1,10 +1,13 @@
 package entity;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
 @Table(name = "wallet", schema = "public", catalog = "s243884")
+@EqualsAndHashCode
 public class WalletEntity {
     private int id;
     private Long balance;
@@ -35,25 +38,25 @@ public class WalletEntity {
         this.balance = balance;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        WalletEntity that = (WalletEntity) o;
-
-        if (id != that.id) return false;
-        if (balance != null ? !balance.equals(that.balance) : that.balance != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (balance != null ? balance.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        WalletEntity that = (WalletEntity) o;
+//
+//        if (id != that.id) return false;
+//        if (balance != null ? !balance.equals(that.balance) : that.balance != null) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (balance != null ? balance.hashCode() : 0);
+//        return result;
+//    }
 
     @OneToMany(mappedBy = "walletBySource")
     public Collection<PaymentEntity> getPaymentsByIdSource() {
