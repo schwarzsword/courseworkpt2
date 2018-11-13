@@ -19,8 +19,7 @@ public class EndDateEntity {
     public EndDateEntity(){} //private constructor
 
     @Id
-    @SequenceGenerator(name = "end_date_id_seq_gen", sequenceName = "end_date_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "end_date_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;

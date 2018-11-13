@@ -79,6 +79,7 @@
             <scope>provided</scope>
         </dependency>
 
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -92,6 +93,16 @@
         </dependency>
 
         
+        <!-- https://mvnrepository.com/artifact/com.vladmihalcea/hibernate-types-52 -->
+        <dependency>
+            <groupId>com.vladmihalcea</groupId>
+            <artifactId>hibernate-types-52</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+
+
+    </dependencies>
+
 
 
     </dependencies>

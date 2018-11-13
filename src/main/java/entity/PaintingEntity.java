@@ -19,8 +19,8 @@ public class PaintingEntity {
     public PaintingEntity(){} //private constructor
 
     @Id
-    @SequenceGenerator(name = "painting_id_seq_gen", sequenceName = "painting_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "painting_id_seq_gen")
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;

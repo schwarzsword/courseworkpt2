@@ -26,8 +26,7 @@ public class LotEntity {
     private State state;
 
     @Id
-    @SequenceGenerator(name = "lot_id_seq_gen", sequenceName = "lot_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lot_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
