@@ -4,13 +4,10 @@ package services;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import config.database.DatabaseConfig;
-import entity.LotEntity;
 import entity.PaintingEntity;
-import entity.PaymentEntity;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,14 +18,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import repository.PaintingRepository;
-
-
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.Objects;
 
+import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Objects;
+import java.lang.*;
 
 @DirtiesContext
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -40,7 +36,6 @@ public class PaintingEntityTest {
     private Logger log = LogManager.getLogger(DatabaseConfig.class);
 
     private EntityManager entityManager;
-    //private ObjectMapper objectMapper;
 
     @Resource
     private JpaTransactionManager transactionManager;
@@ -48,7 +43,6 @@ public class PaintingEntityTest {
     @Before
     public void setStart(){
         this.entityManager= Objects.requireNonNull(transactionManager.getEntityManagerFactory()).createEntityManager();
-
     }
 
     @After
@@ -62,7 +56,8 @@ public class PaintingEntityTest {
     public void toJsonAndLog(Object obj){
         Gson gson = new Gson();
         try {
-            log.info(gson.toJson(obj));
+            String show = gson.toJson(obj);
+            log.info(show);
         }
         catch (JsonIOException e){
             log.info("JsonIOException on toJsonAndLog");
@@ -72,20 +67,15 @@ public class PaintingEntityTest {
 
     @Test
     public void testCreatePainting(){
-//        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
-//                .setID(1)
-//                .setName("qwe")
-//                .setAuthor("me")
-//                .setDescription("good")
-//                .setImg("pic.img")
-//                .setLots(new ArrayList<LotEntity>())
-//                .build();
-
+        String name = "testart2";
+        String author = "testauthor2";
+        String descr = "testDescription2";
+        String img = "testlink2";
         PaintingEntity paintingEntity = PaintingEntity.newBuilder()
-                .setName("testart2")
-                .setAuthor("testauthor2")
-                .setDescription("testDescription2")
-                .setImg("testlink2")
+                .setName(name)
+                .setAuthor(author)
+                .setDescription(descr)
+                .setImg(img)
                 .build();
 
         entityManager.getTransaction().begin();
@@ -96,6 +86,10 @@ public class PaintingEntityTest {
             toJsonAndLog(paintDB);
             log.info("_____________________________________________");
 
+            List<PaintingEntity> result =  paintingRepository.findAllByAuthor(author);
+            result.forEach(e->toJsonAndLog(e));
+
+            log.info("_____________________________________________");
         }
         catch (Exception e){
             e.printStackTrace();
@@ -103,7 +97,6 @@ public class PaintingEntityTest {
         finally {
             entityManager.getTransaction().rollback();
         }
-
 
     }
 

@@ -18,7 +18,8 @@ public class PaymentEntity {
     public PaymentEntity(){}//private constructor
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_id_seq")
+    @SequenceGenerator(name = "payment_id_seq_gen", sequenceName = "payment_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_id_seq_gen")
     @Column(name = "id")
     public int getId() {
         return id;
