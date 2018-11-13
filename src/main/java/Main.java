@@ -10,24 +10,24 @@ public class Main {
 
         PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
         PaintingEntity paintingEntity = PaintingEntity.newBuilder()
-                .setName("testart2")
-                .setAuthor("testauthor2")
-                .setDescription("testDescription2")
-                .setImg("testlink2")
+                .setName("testart12342")
+                .setAuthor("testautho234r2")
+                .setDescription("testDescription223")
+                .setImg("testlink2123")
                 .build();
         paintingRepository.save(paintingEntity);
 
-        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
-        RegistrationEntity registrationEntity = RegistrationEntity.newBuilder()
-                .setLogin("testuser1311")
-                .setPassword("qwerty")
-                .build();
-        RegistrationEntity registrationEntity2 = RegistrationEntity.newBuilder()
-                .setLogin("testuser4112")
-                .setPassword("qwerty")
-                .build();
-        registrationRepository.save(registrationEntity);
-        registrationRepository.save(registrationEntity2);
+//        RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
+//        RegistrationEntity registrationEntity = RegistrationEntity.newBuilder()
+//                .setLogin("testuser1233")
+//                .setPassword("qwerty")
+//                .build();
+//        RegistrationEntity registrationEntity2 = RegistrationEntity.newBuilder()
+//                .setLogin("test231user1")
+//                .setPassword("qwerty")
+//                .build();
+//        registrationRepository.save(registrationEntity);
+//        registrationRepository.save(registrationEntity2);
 
 //        UsersRepository usersRepository = (UsersRepository)ctx.getBean("usersRepository");
 //        UsersEntity usersEntity = UsersEntity.newBuilder()
