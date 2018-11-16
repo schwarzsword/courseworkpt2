@@ -95,5 +95,6 @@ public class Main {
                 .setCustomer(usersRepository.findById(2).get())
                 .build();
         dealRepository.save(dealEntity);
+
     }
 }
