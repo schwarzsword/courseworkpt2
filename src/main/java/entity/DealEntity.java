@@ -13,13 +13,8 @@ public class DealEntity {
     private UsersEntity usersByCustomer;
     private PaymentEntity paymentByPayment;
 
-    public DealEntity(){
-        //private constructor
-    }
-
     @Id
-    @SequenceGenerator(name = "deal_id_seq_gen", sequenceName = "deal_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "deal_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -28,24 +23,6 @@ public class DealEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        DealEntity that = (DealEntity) o;
-//
-//        if (id != that.id) return false;
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        return result;
-//    }
 
     @OneToOne
     @JoinColumn(name = "sold_date", referencedColumnName = "id")
@@ -127,7 +104,4 @@ public class DealEntity {
 
 
     }
-
-
-
 }

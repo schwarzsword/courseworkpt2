@@ -17,17 +17,11 @@ public class LotEntity {
     private PaintingEntity paintingByPainting;
     private UsersEntity sellerByUsers;
 
-
-    public LotEntity(){
-        //private constructor
-    }
-
     @Enumerated(EnumType.STRING)
-    private State state;
+    private String state;
 
     @Id
-    @SequenceGenerator(name = "lot_id_seq_gen", sequenceName = "lot_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lot_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -49,11 +43,11 @@ public class LotEntity {
 
     @Basic
     @Column(name = "state")
-    public State getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(State state) {
+    public void setState(String state) {
         this.state = state;
     }
 
@@ -66,30 +60,6 @@ public class LotEntity {
     public void setStartPrice(Long startPrice) {
         this.startPrice = startPrice;
     }
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        LotEntity lotEntity = (LotEntity) o;
-//
-//        if (id != lotEntity.id) return false;
-//        if (startDate != null ? !startDate.equals(lotEntity.startDate) : lotEntity.startDate != null) return false;
-//        if (state != null ? !state.equals(lotEntity.state) : lotEntity.state != null) return false;
-//        if (startPrice != null ? !startPrice.equals(lotEntity.startPrice) : lotEntity.startPrice != null) return false;
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
-//        result = 31 * result + (state != null ? state.hashCode() : 0);
-//        result = 31 * result + (startPrice != null ? startPrice.hashCode() : 0);
-//        return result;
-//    }
 
     @OneToOne(mappedBy = "lotByLot")
     public EndDateEntity getEndDateById() {
@@ -167,7 +137,7 @@ public class LotEntity {
             return this;
         }
 
-        public Builder setState(State state){
+        public Builder setState(String state){
             LotEntity.this.state = state;
 
             return this;

@@ -15,11 +15,8 @@ public class WalletEntity {
     private Collection<PaymentEntity> paymentsByIdDestination;
     private UsersEntity userByOwner;
 
-    public WalletEntity(){}
-
     @Id
-    @SequenceGenerator(name = "wallet_id_seq_gen", sequenceName = "wallet_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "wallet_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -39,25 +36,6 @@ public class WalletEntity {
         this.balance = balance;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        WalletEntity that = (WalletEntity) o;
-//
-//        if (id != that.id) return false;
-//        if (balance != null ? !balance.equals(that.balance) : that.balance != null) return false;
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + (balance != null ? balance.hashCode() : 0);
-//        return result;
-//    }
 
     @OneToMany(mappedBy = "walletBySource")
     public Collection<PaymentEntity> getPaymentsByIdSource() {

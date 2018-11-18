@@ -16,11 +16,8 @@ public class EndDateEntity {
     private DealEntity dealById;
     private LotEntity lotByLot;
 
-    public EndDateEntity(){} //private constructor
-
     @Id
-    @SequenceGenerator(name = "end_date_id_seq_gen", sequenceName = "end_date_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "end_date_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -49,29 +46,6 @@ public class EndDateEntity {
     public void setState(Boolean state) {
         this.state = state;
     }
-//
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        EndDateEntity that = (EndDateEntity) o;
-//
-//        if (id != that.id) return false;
-//        if (expectingDate != null ? !expectingDate.equals(that.expectingDate) : that.expectingDate != null)
-//            return false;
-//        if (state != null ? !state.equals(that.state) : that.state != null) return false;
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + (expectingDate != null ? expectingDate.hashCode() : 0);
-//        result = 31 * result + (state != null ? state.hashCode() : 0);
-//        return result;
-//    }
 
     @OneToOne(mappedBy = "endDateBySoldDate")
     public DealEntity getDealById() {

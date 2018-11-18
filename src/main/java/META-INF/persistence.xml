@@ -12,15 +12,15 @@
         <class>entity.UsersEntity</class>
         <class>entity.WalletEntity</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/s243884"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
             <property name="hibernate.connection.username" value=""/>
             <property name="hibernate.connection.password" value=""/>
             <property name="hibernate.archive.autodetection" value="class"/>
-            <property name="hibernate.show_sql" value="true"/><!-- was true-->
-            <property name="hibernate.format_sql" value="true"/><!-- was true-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
             <property name="hbm2ddl.auto" value="update"/>
-            <property name="hibernate.id.new_generator_mappings" value="false"/>
+9
         </properties>
     </persistence-unit>
 </persistence>

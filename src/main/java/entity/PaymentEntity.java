@@ -15,11 +15,8 @@ public class PaymentEntity {
     private WalletEntity walletBySource;
     private WalletEntity walletByDestination;
 
-    public PaymentEntity(){}//private constructor
-
     @Id
-    @SequenceGenerator(name = "payment_id_seq_gen", sequenceName = "payment_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_id_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -38,26 +35,6 @@ public class PaymentEntity {
     public void setSum(Long sum) {
         this.sum = sum;
     }
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        PaymentEntity that = (PaymentEntity) o;
-//
-//        if (id != that.id) return false;
-//        if (sum != null ? !sum.equals(that.sum) : that.sum != null) return false;
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + (sum != null ? sum.hashCode() : 0);
-//        return result;
-//    }
 
     @OneToOne(mappedBy = "paymentByPayment")
     public DealEntity getDealById() {

@@ -1,6 +1,3 @@
-create type role as enum ('user', 'admin', 'expert');
-create type state as enum ('on_admin_verifying', 'on_expert_verifying', 'on_market', 'sold');
-
 create table painting(
 id serial primary key,
 name varchar(50),
@@ -22,7 +19,7 @@ surname varchar(50),
 regist integer unique not null check (regist > 0) references registration(id),
 mail varchar(255) unique,
 phone varchar (20) unique,
-role role
+role varchar(6)
 );
 
 create table wallet(
@@ -35,7 +32,7 @@ create table lot(
 id serial primary key,
 painting integer not null check (painting > 0) references painting(id),
 start_date timestamp,
-state state,
+state varchar (16),
 start_price bigint check (start_price>0),
 seller integer check (seller > 0) references users(id)
 );
