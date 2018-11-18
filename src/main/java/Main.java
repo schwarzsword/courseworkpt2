@@ -8,15 +8,6 @@ public class Main {
     public static void main(String[] args){
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DatabaseConfig.class);
 
-        PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
-        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
-                .setName("testart2")
-                .setAuthor("testauthor2")
-                .setDescription("testDescription2")
-                .setImg("testlink2")
-                .build();
-        paintingRepository.save(paintingEntity);
-
         RegistrationRepository registrationRepository = (RegistrationRepository) ctx.getBean("registrationRepository");
         RegistrationEntity registrationEntity = RegistrationEntity.newBuilder()
                 .setLogin("testuser1")
@@ -49,6 +40,24 @@ public class Main {
                 .build();
         usersRepository.save(usersEntity);
         usersRepository.save(usersEntity2);
+
+
+        CertificateRepository certificateRepository = (CertificateRepository)ctx.getBean("certificateRepository");
+        CertificateEntity certificateEntity = CertificateEntity.newBuilder()
+                .setDate(new Timestamp(System.currentTimeMillis()-20000))
+                .setExpert(usersEntity)
+                .build();
+        certificateRepository.save(certificateEntity);
+
+        PaintingRepository paintingRepository = (PaintingRepository)ctx.getBean("paintingRepository");
+        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
+                .setName("testart2")
+                .setAuthor("testauthor2")
+                .setDescription("testDescription2")
+                .setImg("testlink2")
+                .setCertificate(certificateEntity)
+                .build();
+        paintingRepository.save(paintingEntity);
 
         WalletRepository walletRepository = (WalletRepository)ctx.getBean("walletRepository");
         WalletEntity walletEntity1 = WalletEntity.newBuilder()

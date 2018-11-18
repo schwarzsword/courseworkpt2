@@ -8,6 +8,6 @@ import java.sql.Timestamp;
 import java.util.List;
 
 public interface CertificateRepository extends CrudRepository<CertificateEntity, Integer> {
-     List<CertificateEntity> findAllByUsersByExpert(UsersEntity user);
+    List<CertificateEntity> findAllByUsersByExpert(UsersEntity user);
     List<CertificateEntity> findAllByDate(Timestamp date);
 }

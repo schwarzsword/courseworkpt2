@@ -130,6 +130,11 @@ public class PaintingEntity {
             return this;
         }
 
+        public Builder setCertificate(CertificateEntity certificate){
+            PaintingEntity.this.certificateByCertificate = certificate;
+            return this;
+        }
+
         public PaintingEntity build(){
             PaintingEntity pict = new PaintingEntity();
             pict.id = PaintingEntity.this.id;
@@ -138,6 +143,7 @@ public class PaintingEntity {
             pict.img=PaintingEntity.this.img;
             pict.description = PaintingEntity.this.description;
             pict.lotsById = PaintingEntity.this.lotsById;
+            pict.certificateByCertificate = PaintingEntity.this.certificateByCertificate;
 
             return pict;
 
