@@ -15,6 +15,11 @@ public class PaintingEntity {
     private String description = "Description unknown";
     private String img = "Image unknown";
     private Collection<LotEntity> lotsById;
+    private CertificateEntity certificateByCertificate;
+
+    public static Builder newBuilder(){
+        return new PaintingEntity().new Builder();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,8 +81,14 @@ public class PaintingEntity {
         this.lotsById = lotsById;
     }
 
-    public static Builder newBuilder(){
-        return new PaintingEntity().new Builder();
+    @OneToOne
+    @JoinColumn(name = "certificate", referencedColumnName = "id", nullable = false)
+    public CertificateEntity getCertificateByCertificate() {
+        return certificateByCertificate;
+    }
+
+    public void setCertificateByCertificate(CertificateEntity certificateByCertificate) {
+        this.certificateByCertificate = certificateByCertificate;
     }
 
     public class Builder{
@@ -132,7 +143,4 @@ public class PaintingEntity {
 
         }
     }
-
-
-
 }

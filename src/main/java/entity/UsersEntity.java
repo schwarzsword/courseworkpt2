@@ -18,11 +18,17 @@ public class UsersEntity {
     private WalletEntity walletById;
     private RegistrationEntity registrationByRegist;
     private Collection<LotEntity> lotsById;
-
-    public UsersEntity(){}//private constructor
+    private Collection<CertificateEntity> certificatesById;
 
     @Enumerated(EnumType.STRING)
     private String role;
+
+
+    public UsersEntity(){}//private constructor
+
+    public static Builder newBuilder(){
+        return new UsersEntity().new Builder();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -86,7 +92,6 @@ public class UsersEntity {
         this.role = role;
     }
 
-
     @OneToMany(mappedBy = "usersByCustomer")
     public Collection<DealEntity> getDealsById() {
         return dealsById;
@@ -122,8 +127,13 @@ public class UsersEntity {
 
     public void setLotsById(Collection<LotEntity> lotsById) {this.lotsById = lotsById;}
 
-    public static Builder newBuilder(){
-        return new UsersEntity().new Builder();
+    @OneToMany(mappedBy = "usersByExpert")
+    public Collection<CertificateEntity> getCertificatesById() {
+        return certificatesById;
+    }
+
+    public void setCertificatesById(Collection<CertificateEntity> certificatesById) {
+        this.certificatesById = certificatesById;
     }
 
     public class Builder{
