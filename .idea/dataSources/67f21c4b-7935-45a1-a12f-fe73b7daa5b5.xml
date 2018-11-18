@@ -100,8 +100,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-11-18.14:22:37.185</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1011</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-11-18.16:46:30.777</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1284</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -147,685 +147,776 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="25" parent="18" name="deal_id_seq">
-      <ObjectId>18621</ObjectId>
+    <sequence id="25" parent="18" name="certificate_id_seq">
+      <ObjectId>19873</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1278</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="26" parent="18" name="end_date_id_seq">
-      <ObjectId>18584</ObjectId>
+    <sequence id="26" parent="18" name="deal_id_seq">
+      <ObjectId>19981</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1284</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="27" parent="18" name="lot_id_seq">
-      <ObjectId>18563</ObjectId>
+    <sequence id="27" parent="18" name="end_date_id_seq">
+      <ObjectId>19944</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1282</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="28" parent="18" name="painting_id_seq">
-      <ObjectId>18502</ObjectId>
+    <sequence id="28" parent="18" name="lot_id_seq">
+      <ObjectId>19923</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1281</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="29" parent="18" name="payment_id_seq">
-      <ObjectId>18600</ObjectId>
+    <sequence id="29" parent="18" name="painting_id_seq">
+      <ObjectId>19887</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1279</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="30" parent="18" name="registration_id_seq">
-      <ObjectId>18513</ObjectId>
+    <sequence id="30" parent="18" name="payment_id_seq">
+      <ObjectId>19960</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1005</StateNumber>
+      <StateNumber>1283</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="31" parent="18" name="users_id_seq">
-      <ObjectId>18526</ObjectId>
+    <sequence id="31" parent="18" name="registration_id_seq">
+      <ObjectId>19840</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1276</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="32" parent="18" name="wallet_id_seq">
-      <ObjectId>18546</ObjectId>
+    <sequence id="32" parent="18" name="users_id_seq">
+      <ObjectId>19853</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1007</StateNumber>
+      <StateNumber>1277</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="33" parent="18" name="deal">
-      <ObjectId>18623</ObjectId>
+    <sequence id="33" parent="18" name="wallet_id_seq">
+      <ObjectId>19906</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1011</StateNumber>
-    </table>
-    <table id="34" parent="18" name="end_date">
-      <ObjectId>18586</ObjectId>
+      <StateNumber>1280</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="34" parent="18" name="certificate">
+      <ObjectId>19875</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1279</StateNumber>
     </table>
-    <table id="35" parent="18" name="lot">
-      <ObjectId>18565</ObjectId>
+    <table id="35" parent="18" name="deal">
+      <ObjectId>19983</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1284</StateNumber>
     </table>
-    <table id="36" parent="18" name="painting">
-      <ObjectId>18504</ObjectId>
+    <table id="36" parent="18" name="end_date">
+      <ObjectId>19946</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1284</StateNumber>
     </table>
-    <table id="37" parent="18" name="payment">
-      <ObjectId>18602</ObjectId>
+    <table id="37" parent="18" name="lot">
+      <ObjectId>19925</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1282</StateNumber>
     </table>
-    <table id="38" parent="18" name="registration">
-      <ObjectId>18515</ObjectId>
+    <table id="38" parent="18" name="painting">
+      <ObjectId>19889</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1281</StateNumber>
     </table>
-    <table id="39" parent="18" name="users">
-      <ObjectId>18528</ObjectId>
+    <table id="39" parent="18" name="payment">
+      <ObjectId>19962</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1284</StateNumber>
     </table>
-    <table id="40" parent="18" name="wallet">
-      <ObjectId>18548</ObjectId>
+    <table id="40" parent="18" name="registration">
+      <ObjectId>19842</ObjectId>
       <Owner>s243884</Owner>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1277</StateNumber>
     </table>
-    <column id="41" parent="33" name="id">
+    <table id="41" parent="18" name="users">
+      <ObjectId>19855</ObjectId>
+      <Owner>s243884</Owner>
+      <StateNumber>1284</StateNumber>
+    </table>
+    <table id="42" parent="18" name="wallet">
+      <ObjectId>19908</ObjectId>
+      <Owner>s243884</Owner>
+      <StateNumber>1283</StateNumber>
+    </table>
+    <column id="43" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1278</StateNumber>
+      <DefaultExpression>nextval(&apos;certificate_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>certificate_id_seq</SequenceName>
+    </column>
+    <column id="44" parent="34" name="date">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1278</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="45" parent="34" name="expert">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1278</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="46" parent="34" name="certificate_pkey">
+      <ObjectId>19880</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="34" name="certificate_pkey">
+      <ObjectId>19881</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>certificate_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="34" name="certificate_expert_fkey">
+      <ObjectId>19882</ObjectId>
+      <ColNames>expert</ColNames>
+      <RefTableId>19855</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <check id="49" parent="34" name="certificate_expert_check">
+      <ObjectId>19879</ObjectId>
+      <ColNames>expert</ColNames>
+      <Predicate>expert &gt; 0</Predicate>
+    </check>
+    <column id="50" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1284</StateNumber>
       <DefaultExpression>nextval(&apos;deal_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>deal_id_seq</SequenceName>
     </column>
-    <column id="42" parent="33" name="sold_date">
+    <column id="51" parent="35" name="sold_date">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1284</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="33" name="customer">
+    <column id="52" parent="35" name="customer">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1284</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="44" parent="33" name="payment">
+    <column id="53" parent="35" name="payment">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1011</StateNumber>
+      <StateNumber>1284</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="45" parent="33" name="deal_pkey">
-      <ObjectId>18630</ObjectId>
+    <index id="54" parent="35" name="deal_pkey">
+      <ObjectId>19990</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="33" name="deal_sold_date_key">
-      <ObjectId>18632</ObjectId>
+    <index id="55" parent="35" name="deal_sold_date_key">
+      <ObjectId>19992</ObjectId>
       <ColNames>sold_date</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="47" parent="33" name="deal_payment_key">
-      <ObjectId>18634</ObjectId>
+    <index id="56" parent="35" name="deal_payment_key">
+      <ObjectId>19994</ObjectId>
       <ColNames>payment</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="33" name="deal_pkey">
-      <ObjectId>18631</ObjectId>
+    <key id="57" parent="35" name="deal_pkey">
+      <ObjectId>19991</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>deal_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="49" parent="33" name="deal_sold_date_key">
-      <ObjectId>18633</ObjectId>
+    <key id="58" parent="35" name="deal_sold_date_key">
+      <ObjectId>19993</ObjectId>
       <ColNames>sold_date</ColNames>
       <UnderlyingIndexName>deal_sold_date_key</UnderlyingIndexName>
     </key>
-    <key id="50" parent="33" name="deal_payment_key">
-      <ObjectId>18635</ObjectId>
+    <key id="59" parent="35" name="deal_payment_key">
+      <ObjectId>19995</ObjectId>
       <ColNames>payment</ColNames>
       <UnderlyingIndexName>deal_payment_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="51" parent="33" name="deal_sold_date_fkey">
-      <ObjectId>18636</ObjectId>
+    <foreign-key id="60" parent="35" name="deal_sold_date_fkey">
+      <ObjectId>19996</ObjectId>
       <ColNames>sold_date</ColNames>
-      <RefTableId>18586</RefTableId>
+      <RefTableId>19946</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>end_date</RefTableName>
       <RefKeyName>end_date_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="52" parent="33" name="deal_customer_fkey">
-      <ObjectId>18641</ObjectId>
+    <foreign-key id="61" parent="35" name="deal_customer_fkey">
+      <ObjectId>20001</ObjectId>
       <ColNames>customer</ColNames>
-      <RefTableId>18528</RefTableId>
+      <RefTableId>19855</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="53" parent="33" name="deal_payment_fkey">
-      <ObjectId>18646</ObjectId>
+    <foreign-key id="62" parent="35" name="deal_payment_fkey">
+      <ObjectId>20006</ObjectId>
       <ColNames>payment</ColNames>
-      <RefTableId>18602</RefTableId>
+      <RefTableId>19962</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>payment</RefTableName>
       <RefKeyName>payment_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="54" parent="33" name="deal_sold_date_check">
-      <ObjectId>18627</ObjectId>
+    <check id="63" parent="35" name="deal_sold_date_check">
+      <ObjectId>19987</ObjectId>
       <ColNames>sold_date</ColNames>
       <Predicate>sold_date &gt; 0</Predicate>
     </check>
-    <check id="55" parent="33" name="deal_customer_check">
-      <ObjectId>18628</ObjectId>
+    <check id="64" parent="35" name="deal_customer_check">
+      <ObjectId>19988</ObjectId>
       <ColNames>customer</ColNames>
       <Predicate>customer &gt; 0</Predicate>
     </check>
-    <check id="56" parent="33" name="deal_payment_check">
-      <ObjectId>18629</ObjectId>
+    <check id="65" parent="35" name="deal_payment_check">
+      <ObjectId>19989</ObjectId>
       <ColNames>payment</ColNames>
       <Predicate>payment &gt; 0</Predicate>
     </check>
-    <column id="57" parent="34" name="id">
+    <column id="66" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1282</StateNumber>
       <DefaultExpression>nextval(&apos;end_date_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>end_date_id_seq</SequenceName>
     </column>
-    <column id="58" parent="34" name="lot">
+    <column id="67" parent="36" name="lot">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1282</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="59" parent="34" name="expecting_date">
+    <column id="68" parent="36" name="expecting_date">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1282</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="60" parent="34" name="state">
+    <column id="69" parent="36" name="state">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>1009</StateNumber>
+      <StateNumber>1282</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="61" parent="34" name="end_date_pkey">
-      <ObjectId>18591</ObjectId>
+    <index id="70" parent="36" name="end_date_pkey">
+      <ObjectId>19951</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="62" parent="34" name="end_date_lot_key">
-      <ObjectId>18593</ObjectId>
+    <index id="71" parent="36" name="end_date_lot_key">
+      <ObjectId>19953</ObjectId>
       <ColNames>lot</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="63" parent="34" name="end_date_pkey">
-      <ObjectId>18592</ObjectId>
+    <key id="72" parent="36" name="end_date_pkey">
+      <ObjectId>19952</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>end_date_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="64" parent="34" name="end_date_lot_key">
-      <ObjectId>18594</ObjectId>
+    <key id="73" parent="36" name="end_date_lot_key">
+      <ObjectId>19954</ObjectId>
       <ColNames>lot</ColNames>
       <UnderlyingIndexName>end_date_lot_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="65" parent="34" name="end_date_lot_fkey">
-      <ObjectId>18595</ObjectId>
+    <foreign-key id="74" parent="36" name="end_date_lot_fkey">
+      <ObjectId>19955</ObjectId>
       <ColNames>lot</ColNames>
-      <RefTableId>18565</RefTableId>
+      <RefTableId>19925</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>lot</RefTableName>
       <RefKeyName>lot_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="66" parent="34" name="end_date_lot_check">
-      <ObjectId>18590</ObjectId>
+    <check id="75" parent="36" name="end_date_lot_check">
+      <ObjectId>19950</ObjectId>
       <ColNames>lot</ColNames>
       <Predicate>lot &gt; 0</Predicate>
     </check>
-    <column id="67" parent="35" name="id">
+    <column id="76" parent="37" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <DefaultExpression>nextval(&apos;lot_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>lot_id_seq</SequenceName>
     </column>
-    <column id="68" parent="35" name="painting">
+    <column id="77" parent="37" name="painting">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="69" parent="35" name="start_date">
+    <column id="78" parent="37" name="start_date">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="70" parent="35" name="state">
+    <column id="79" parent="37" name="state">
       <Position>4</Position>
       <DataType>varchar(16)|0s</DataType>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="71" parent="35" name="start_price">
+    <column id="80" parent="37" name="start_price">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="72" parent="35" name="seller">
+    <column id="81" parent="37" name="seller">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1008</StateNumber>
+      <StateNumber>1281</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="73" parent="35" name="lot_pkey">
-      <ObjectId>18572</ObjectId>
+    <index id="82" parent="37" name="lot_pkey">
+      <ObjectId>19932</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="74" parent="35" name="lot_pkey">
-      <ObjectId>18573</ObjectId>
+    <key id="83" parent="37" name="lot_pkey">
+      <ObjectId>19933</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>lot_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="75" parent="35" name="lot_painting_fkey">
-      <ObjectId>18574</ObjectId>
+    <foreign-key id="84" parent="37" name="lot_painting_fkey">
+      <ObjectId>19934</ObjectId>
       <ColNames>painting</ColNames>
-      <RefTableId>18504</RefTableId>
+      <RefTableId>19889</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>painting</RefTableName>
       <RefKeyName>painting_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="76" parent="35" name="lot_seller_fkey">
-      <ObjectId>18579</ObjectId>
+    <foreign-key id="85" parent="37" name="lot_seller_fkey">
+      <ObjectId>19939</ObjectId>
       <ColNames>seller</ColNames>
-      <RefTableId>18528</RefTableId>
+      <RefTableId>19855</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="77" parent="35" name="lot_painting_check">
-      <ObjectId>18569</ObjectId>
+    <check id="86" parent="37" name="lot_painting_check">
+      <ObjectId>19929</ObjectId>
       <ColNames>painting</ColNames>
       <Predicate>painting &gt; 0</Predicate>
     </check>
-    <check id="78" parent="35" name="lot_start_price_check">
-      <ObjectId>18570</ObjectId>
+    <check id="87" parent="37" name="lot_start_price_check">
+      <ObjectId>19930</ObjectId>
       <ColNames>start_price</ColNames>
       <Predicate>start_price &gt; 0</Predicate>
     </check>
-    <check id="79" parent="35" name="lot_seller_check">
-      <ObjectId>18571</ObjectId>
+    <check id="88" parent="37" name="lot_seller_check">
+      <ObjectId>19931</ObjectId>
       <ColNames>seller</ColNames>
       <Predicate>seller &gt; 0</Predicate>
     </check>
-    <column id="80" parent="36" name="id">
+    <column id="89" parent="38" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1279</StateNumber>
       <DefaultExpression>nextval(&apos;painting_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>painting_id_seq</SequenceName>
     </column>
-    <column id="81" parent="36" name="name">
+    <column id="90" parent="38" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1279</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="36" name="author">
+    <column id="91" parent="38" name="author">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1279</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="83" parent="36" name="description">
+    <column id="92" parent="38" name="description">
       <Position>4</Position>
       <DataType>text|0s</DataType>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1279</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="84" parent="36" name="img">
+    <column id="93" parent="38" name="img">
       <Position>5</Position>
       <DataType>text|0s</DataType>
-      <StateNumber>1004</StateNumber>
+      <StateNumber>1279</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="85" parent="36" name="painting_pkey">
-      <ObjectId>18511</ObjectId>
+    <column id="94" parent="38" name="certificate">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1279</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="95" parent="38" name="painting_pkey">
+      <ObjectId>19897</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="86" parent="36" name="painting_pkey">
-      <ObjectId>18512</ObjectId>
+    <index id="96" parent="38" name="painting_certificate_key">
+      <ObjectId>19899</ObjectId>
+      <ColNames>certificate</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="38" name="painting_pkey">
+      <ObjectId>19898</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>painting_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="87" parent="37" name="id">
+    <key id="98" parent="38" name="painting_certificate_key">
+      <ObjectId>19900</ObjectId>
+      <ColNames>certificate</ColNames>
+      <UnderlyingIndexName>painting_certificate_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="99" parent="38" name="painting_certificate_fkey">
+      <ObjectId>19901</ObjectId>
+      <ColNames>certificate</ColNames>
+      <RefTableId>19875</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>certificate</RefTableName>
+      <RefKeyName>certificate_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <check id="100" parent="38" name="painting_certificate_check">
+      <ObjectId>19893</ObjectId>
+      <ColNames>certificate</ColNames>
+      <Predicate>certificate &gt; 0</Predicate>
+    </check>
+    <column id="101" parent="39" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1283</StateNumber>
       <DefaultExpression>nextval(&apos;payment_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>payment_id_seq</SequenceName>
     </column>
-    <column id="88" parent="37" name="source">
+    <column id="102" parent="39" name="source">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1283</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="89" parent="37" name="destination">
+    <column id="103" parent="39" name="destination">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1283</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="90" parent="37" name="sum">
+    <column id="104" parent="39" name="sum">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1010</StateNumber>
+      <StateNumber>1283</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="91" parent="37" name="payment_pkey">
-      <ObjectId>18609</ObjectId>
+    <index id="105" parent="39" name="payment_pkey">
+      <ObjectId>19969</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="92" parent="37" name="payment_pkey">
-      <ObjectId>18610</ObjectId>
+    <key id="106" parent="39" name="payment_pkey">
+      <ObjectId>19970</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>payment_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="93" parent="37" name="payment_source_fkey">
-      <ObjectId>18611</ObjectId>
+    <foreign-key id="107" parent="39" name="payment_source_fkey">
+      <ObjectId>19971</ObjectId>
       <ColNames>source</ColNames>
-      <RefTableId>18548</RefTableId>
+      <RefTableId>19908</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>wallet</RefTableName>
       <RefKeyName>wallet_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="94" parent="37" name="payment_destination_fkey">
-      <ObjectId>18616</ObjectId>
+    <foreign-key id="108" parent="39" name="payment_destination_fkey">
+      <ObjectId>19976</ObjectId>
       <ColNames>destination</ColNames>
-      <RefTableId>18548</RefTableId>
+      <RefTableId>19908</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>wallet</RefTableName>
       <RefKeyName>wallet_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="95" parent="37" name="payment_source_check">
-      <ObjectId>18606</ObjectId>
+    <check id="109" parent="39" name="payment_source_check">
+      <ObjectId>19966</ObjectId>
       <ColNames>source</ColNames>
       <Predicate>source &gt; 0</Predicate>
     </check>
-    <check id="96" parent="37" name="payment_destination_check">
-      <ObjectId>18607</ObjectId>
+    <check id="110" parent="39" name="payment_destination_check">
+      <ObjectId>19967</ObjectId>
       <ColNames>destination</ColNames>
       <Predicate>destination &gt; 0</Predicate>
     </check>
-    <check id="97" parent="37" name="payment_sum_check">
-      <ObjectId>18608</ObjectId>
+    <check id="111" parent="39" name="payment_sum_check">
+      <ObjectId>19968</ObjectId>
       <ColNames>sum</ColNames>
       <Predicate>sum &gt; 0</Predicate>
     </check>
-    <column id="98" parent="38" name="id">
+    <column id="112" parent="40" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1005</StateNumber>
+      <StateNumber>1276</StateNumber>
       <DefaultExpression>nextval(&apos;registration_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>registration_id_seq</SequenceName>
     </column>
-    <column id="99" parent="38" name="login">
+    <column id="113" parent="40" name="login">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <StateNumber>1005</StateNumber>
+      <StateNumber>1276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="100" parent="38" name="password">
+    <column id="114" parent="40" name="password">
       <Position>3</Position>
       <DataType>text|0s</DataType>
-      <StateNumber>1005</StateNumber>
+      <StateNumber>1276</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="101" parent="38" name="registration_pkey">
-      <ObjectId>18522</ObjectId>
+    <index id="115" parent="40" name="registration_pkey">
+      <ObjectId>19849</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="102" parent="38" name="registration_login_key">
-      <ObjectId>18524</ObjectId>
+    <index id="116" parent="40" name="registration_login_key">
+      <ObjectId>19851</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="103" parent="38" name="registration_pkey">
-      <ObjectId>18523</ObjectId>
+    <key id="117" parent="40" name="registration_pkey">
+      <ObjectId>19850</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>registration_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="104" parent="38" name="registration_login_key">
-      <ObjectId>18525</ObjectId>
+    <key id="118" parent="40" name="registration_login_key">
+      <ObjectId>19852</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>registration_login_key</UnderlyingIndexName>
     </key>
-    <column id="105" parent="39" name="id">
+    <column id="119" parent="41" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>users_id_seq</SequenceName>
     </column>
-    <column id="106" parent="39" name="name">
+    <column id="120" parent="41" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="107" parent="39" name="surname">
+    <column id="121" parent="41" name="surname">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="108" parent="39" name="regist">
+    <column id="122" parent="41" name="regist">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="109" parent="39" name="mail">
+    <column id="123" parent="41" name="mail">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="110" parent="39" name="phone">
+    <column id="124" parent="41" name="phone">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="111" parent="39" name="role">
+    <column id="125" parent="41" name="role">
       <Position>7</Position>
       <DataType>varchar(6)|0s</DataType>
-      <StateNumber>1006</StateNumber>
+      <StateNumber>1277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="112" parent="39" name="users_pkey">
-      <ObjectId>18533</ObjectId>
+    <index id="126" parent="41" name="users_pkey">
+      <ObjectId>19860</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="113" parent="39" name="users_regist_key">
-      <ObjectId>18535</ObjectId>
+    <index id="127" parent="41" name="users_regist_key">
+      <ObjectId>19862</ObjectId>
       <ColNames>regist</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="114" parent="39" name="users_mail_key">
-      <ObjectId>18537</ObjectId>
+    <index id="128" parent="41" name="users_mail_key">
+      <ObjectId>19864</ObjectId>
       <ColNames>mail</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="115" parent="39" name="users_phone_key">
-      <ObjectId>18539</ObjectId>
+    <index id="129" parent="41" name="users_phone_key">
+      <ObjectId>19866</ObjectId>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="116" parent="39" name="users_pkey">
-      <ObjectId>18534</ObjectId>
+    <key id="130" parent="41" name="users_pkey">
+      <ObjectId>19861</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="117" parent="39" name="users_regist_key">
-      <ObjectId>18536</ObjectId>
+    <key id="131" parent="41" name="users_regist_key">
+      <ObjectId>19863</ObjectId>
       <ColNames>regist</ColNames>
       <UnderlyingIndexName>users_regist_key</UnderlyingIndexName>
     </key>
-    <key id="118" parent="39" name="users_mail_key">
-      <ObjectId>18538</ObjectId>
+    <key id="132" parent="41" name="users_mail_key">
+      <ObjectId>19865</ObjectId>
       <ColNames>mail</ColNames>
       <UnderlyingIndexName>users_mail_key</UnderlyingIndexName>
     </key>
-    <key id="119" parent="39" name="users_phone_key">
-      <ObjectId>18540</ObjectId>
+    <key id="133" parent="41" name="users_phone_key">
+      <ObjectId>19867</ObjectId>
       <ColNames>phone</ColNames>
       <UnderlyingIndexName>users_phone_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="120" parent="39" name="users_regist_fkey">
-      <ObjectId>18541</ObjectId>
+    <foreign-key id="134" parent="41" name="users_regist_fkey">
+      <ObjectId>19868</ObjectId>
       <ColNames>regist</ColNames>
-      <RefTableId>18515</RefTableId>
+      <RefTableId>19842</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>registration</RefTableName>
       <RefKeyName>registration_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="121" parent="39" name="users_regist_check">
-      <ObjectId>18532</ObjectId>
+    <check id="135" parent="41" name="users_regist_check">
+      <ObjectId>19859</ObjectId>
       <ColNames>regist</ColNames>
       <Predicate>regist &gt; 0</Predicate>
     </check>
-    <column id="122" parent="40" name="id">
+    <column id="136" parent="42" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1007</StateNumber>
+      <StateNumber>1280</StateNumber>
       <DefaultExpression>nextval(&apos;wallet_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>wallet_id_seq</SequenceName>
     </column>
-    <column id="123" parent="40" name="owner">
+    <column id="137" parent="42" name="owner">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1007</StateNumber>
+      <StateNumber>1280</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="124" parent="40" name="balance">
+    <column id="138" parent="42" name="balance">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1007</StateNumber>
+      <StateNumber>1280</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="125" parent="40" name="wallet_pkey">
-      <ObjectId>18554</ObjectId>
+    <index id="139" parent="42" name="wallet_pkey">
+      <ObjectId>19914</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="126" parent="40" name="wallet_owner_key">
-      <ObjectId>18556</ObjectId>
+    <index id="140" parent="42" name="wallet_owner_key">
+      <ObjectId>19916</ObjectId>
       <ColNames>owner</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="127" parent="40" name="wallet_pkey">
-      <ObjectId>18555</ObjectId>
+    <key id="141" parent="42" name="wallet_pkey">
+      <ObjectId>19915</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>wallet_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="128" parent="40" name="wallet_owner_key">
-      <ObjectId>18557</ObjectId>
+    <key id="142" parent="42" name="wallet_owner_key">
+      <ObjectId>19917</ObjectId>
       <ColNames>owner</ColNames>
       <UnderlyingIndexName>wallet_owner_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="129" parent="40" name="wallet_owner_fkey">
-      <ObjectId>18558</ObjectId>
+    <foreign-key id="143" parent="42" name="wallet_owner_fkey">
+      <ObjectId>19918</ObjectId>
       <ColNames>owner</ColNames>
-      <RefTableId>18528</RefTableId>
+      <RefTableId>19855</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <check id="130" parent="40" name="wallet_owner_check">
-      <ObjectId>18552</ObjectId>
+    <check id="144" parent="42" name="wallet_owner_check">
+      <ObjectId>19912</ObjectId>
       <ColNames>owner</ColNames>
       <Predicate>owner &gt; 0</Predicate>
     </check>
-    <check id="131" parent="40" name="wallet_balance_check">
-      <ObjectId>18553</ObjectId>
+    <check id="145" parent="42" name="wallet_balance_check">
+      <ObjectId>19913</ObjectId>
       <ColNames>balance</ColNames>
       <Predicate>balance &gt; 0</Predicate>
     </check>
