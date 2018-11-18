@@ -20,6 +20,7 @@ import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Objects;
 import java.lang.*;
 
@@ -33,6 +34,10 @@ public class PaintingEntityTest {
     private Logger log = LogManager.getLogger(DatabaseConfig.class);
 
     private EntityManager entityManager;
+    private String name;
+    private String author;
+    private String descr;
+    private String img;
 
     @Resource
     private JpaTransactionManager transactionManager;
@@ -40,10 +45,10 @@ public class PaintingEntityTest {
     @Before
     public void setStart(){
         this.entityManager= Objects.requireNonNull(transactionManager.getEntityManagerFactory()).createEntityManager();
-        String name = "testart2";
-        String author = "testauthor2";
-        String descr = "testDescription2";
-        String img = "testlink2";
+        name = "testart2";
+        author = "testauthor2";
+        descr = "testDescription2";
+        img = "testlink2";
         PaintingEntity paintingEntity = PaintingEntity.newBuilder()
                 .setName(name)
                 .setAuthor(author)
@@ -88,8 +93,8 @@ public class PaintingEntityTest {
             toJsonAndLog(paintDB);
             log.info("_____________________________________________");
 
-            //List<PaintingEntity> result =  paintingRepository.findAllByAuthor(author);
-            //result.forEach(e->toJsonAndLog(e));
+            List<PaintingEntity> result =  paintingRepository.findAllByAuthor(author);
+            result.forEach(e->toJsonAndLog(e));
 
             log.info("_____________________________________________");
         }
