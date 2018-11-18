@@ -8,6 +8,6 @@ import entity.UsersEntity;
 import java.sql.Timestamp;
 
 public interface AddLotService {
-    public LotEntity setLot(PaintingEntity painting, Timestamp start_date, Long start_price, UsersEntity seller); //TODO set lot's fields, set state on admin;
+    public LotEntity setLot(PaintingEntity painting, Timestamp start_date, Long start_price, UsersEntity seller);
 
 }

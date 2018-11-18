@@ -3,9 +3,11 @@ package service;
 import entity.RegistrationEntity;
 import entity.UsersEntity;
 
+import java.security.NoSuchAlgorithmException;
+
 public interface AuthorizationService {
-    boolean isRegistered(); //TODO check in registrationEntity if login and pswd matches;
-    RegistrationEntity setNewEntering(); //TODO write login and encrypt pswd;
-    UsersEntity setNewUser(RegistrationEntity registrationEntity); //TODO set fields and registration for new user;
+    RegistrationEntity isRegistered(String login);
+    RegistrationEntity setNewEntering(String login, String password)  throws NoSuchAlgorithmException;
+    UsersEntity setNewUser(RegistrationEntity registrationEntity, String mail, String name, String surname, String phone, String role);
     //может еще можно сделать изменение полей юзера, хз
 }
