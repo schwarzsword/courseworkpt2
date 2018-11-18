@@ -15,7 +15,6 @@ public class WalletEntity {
     private Collection<PaymentEntity> paymentsByIdDestination;
     private UsersEntity userByOwner;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -17,8 +17,6 @@ public class LotEntity {
     private PaintingEntity paintingByPainting;
     private UsersEntity sellerByUsers;
 
-
-
     @Enumerated(EnumType.STRING)
     private String state;
 
@@ -62,7 +60,6 @@ public class LotEntity {
     public void setStartPrice(Long startPrice) {
         this.startPrice = startPrice;
     }
-
 
     @OneToOne(mappedBy = "lotByLot")
     public EndDateEntity getEndDateById() {

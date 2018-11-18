@@ -13,7 +13,6 @@ public class DealEntity {
     private UsersEntity usersByCustomer;
     private PaymentEntity paymentByPayment;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,7 +23,6 @@ public class DealEntity {
     public void setId(int id) {
         this.id = id;
     }
-
 
     @OneToOne
     @JoinColumn(name = "sold_date", referencedColumnName = "id")
@@ -106,5 +104,4 @@ public class DealEntity {
 
 
     }
-
 }

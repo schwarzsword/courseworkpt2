@@ -13,5 +13,4 @@ public interface DealRepository extends CrudRepository<DealEntity, Integer> {
     List<DealEntity> findAllByUsersByCustomer(UsersEntity customer);
     Optional<DealEntity> findByPaymentByPayment(PaymentEntity payment);
     Optional<DealEntity> findByEndDateBySoldDate(EndDateEntity endDate);
-
 }

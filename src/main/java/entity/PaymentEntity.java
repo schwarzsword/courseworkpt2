@@ -15,7 +15,6 @@ public class PaymentEntity {
     private WalletEntity walletBySource;
     private WalletEntity walletByDestination;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -36,7 +35,6 @@ public class PaymentEntity {
     public void setSum(Long sum) {
         this.sum = sum;
     }
-
 
     @OneToOne(mappedBy = "paymentByPayment")
     public DealEntity getDealById() {

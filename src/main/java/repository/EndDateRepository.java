@@ -1,6 +1,7 @@
 package repository;
 
 import entity.EndDateEntity;
+
 import entity.LotEntity;
 import org.springframework.data.repository.CrudRepository;
 

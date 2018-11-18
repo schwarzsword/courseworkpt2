@@ -14,7 +14,6 @@ public class RegistrationEntity {
     private String password;
     private UsersEntity userByRegist;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -45,7 +44,6 @@ public class RegistrationEntity {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
     @OneToOne(mappedBy = "registrationByRegist")
     public UsersEntity getUserByRegist() {

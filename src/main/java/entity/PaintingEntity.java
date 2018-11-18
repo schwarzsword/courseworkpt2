@@ -15,7 +15,7 @@ public class PaintingEntity {
     private String description = "Description unknown";
     private String img = "Image unknown";
     private Collection<LotEntity> lotsById;
-    private SertificateEntity sertificateBySertificate;
+    private CertificateEntity certificateByCertificate;
 
     public static Builder newBuilder(){
         return new PaintingEntity().new Builder();
@@ -82,13 +82,13 @@ public class PaintingEntity {
     }
 
     @OneToOne
-    @JoinColumn(name = "sertificate", referencedColumnName = "id", nullable = false)
-    public SertificateEntity getSertificateBySertificate() {
-        return sertificateBySertificate;
+    @JoinColumn(name = "certificate", referencedColumnName = "id", nullable = false)
+    public CertificateEntity getCertificateByCertificate() {
+        return certificateByCertificate;
     }
 
-    public void setSertificateBySertificate(SertificateEntity sertificateBySertificate) {
-        this.sertificateBySertificate = sertificateBySertificate;
+    public void setCertificateByCertificate(CertificateEntity certificateByCertificate) {
+        this.certificateByCertificate = certificateByCertificate;
     }
 
     public class Builder{
@@ -130,6 +130,11 @@ public class PaintingEntity {
             return this;
         }
 
+        public Builder setCertificate(CertificateEntity certificate){
+            PaintingEntity.this.certificateByCertificate = certificate;
+            return this;
+        }
+
         public PaintingEntity build(){
             PaintingEntity pict = new PaintingEntity();
             pict.id = PaintingEntity.this.id;
@@ -138,6 +143,7 @@ public class PaintingEntity {
             pict.img=PaintingEntity.this.img;
             pict.description = PaintingEntity.this.description;
             pict.lotsById = PaintingEntity.this.lotsById;
+            pict.certificateByCertificate = PaintingEntity.this.certificateByCertificate;
 
             return pict;
 

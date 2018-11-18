@@ -18,7 +18,7 @@ public class UsersEntity {
     private WalletEntity walletById;
     private RegistrationEntity registrationByRegist;
     private Collection<LotEntity> lotsById;
-    private Collection<SertificateEntity> sertificatesById;
+    private Collection<CertificateEntity> certificatesById;
 
     @Enumerated(EnumType.STRING)
     private String role;
@@ -128,12 +128,12 @@ public class UsersEntity {
     public void setLotsById(Collection<LotEntity> lotsById) {this.lotsById = lotsById;}
 
     @OneToMany(mappedBy = "usersByExpert")
-    public Collection<SertificateEntity> getSertificatesById() {
-        return sertificatesById;
+    public Collection<CertificateEntity> getCertificatesById() {
+        return certificatesById;
     }
 
-    public void setSertificatesById(Collection<SertificateEntity> sertificatesById) {
-        this.sertificatesById = sertificatesById;
+    public void setCertificatesById(Collection<CertificateEntity> certificatesById) {
+        this.certificatesById = certificatesById;
     }
 
     public class Builder{

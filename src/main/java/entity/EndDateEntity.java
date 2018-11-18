@@ -16,7 +16,6 @@ public class EndDateEntity {
     private DealEntity dealById;
     private LotEntity lotByLot;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

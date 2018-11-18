@@ -1,5 +1,7 @@
 package entity;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Collection;
@@ -7,14 +9,15 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "certificate", schema = "public", catalog = "s243884")
+@EqualsAndHashCode
 public class CertificateEntity {
     private int id;
     private Timestamp date;
-    private Integer expert;
     private PaintingEntity paintingById;
     private UsersEntity usersByExpert;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -34,32 +37,7 @@ public class CertificateEntity {
         this.date = date;
     }
 
-    @Basic
-    @Column(name = "expert")
-    public Integer getExpert() {
-        return expert;
-    }
-
-    public void setExpert(Integer expert) {
-        this.expert = expert;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CertificateEntity that = (CertificateEntity) o;
-        return id == that.id &&
-                Objects.equals(date, that.date) &&
-                Objects.equals(expert, that.expert);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, date, expert);
-    }
-
-    @OneToOne(mappedBy = "sertificateBySertificate")
+    @OneToOne(mappedBy = "certificateByCertificate")
     public PaintingEntity getPaintingById() {
         return paintingById;
     }
@@ -76,5 +54,42 @@ public class CertificateEntity {
 
     public void setUsersByExpert(UsersEntity usersByExpert) {
         this.usersByExpert = usersByExpert;
+    }
+    public static Builder newBuilder(){
+        return new CertificateEntity().new Builder();
+    }
+
+    public class Builder{
+        private Builder(){}
+
+        public Builder setID(int id){
+            CertificateEntity.this.id = id;
+            return this;
+        }
+
+        public Builder setDate(Timestamp date){
+            CertificateEntity.this.date = date;
+            return this;
+        }
+
+        public Builder setExpert(UsersEntity expert){
+            CertificateEntity.this.usersByExpert = expert;
+            return this;
+        }
+
+        public Builder setPainting(PaintingEntity painting){
+            CertificateEntity.this.paintingById = painting;
+            return this;
+        }
+
+        public CertificateEntity build(){
+            CertificateEntity certificateEntity = new CertificateEntity();
+            certificateEntity.id = CertificateEntity.this.id;
+            certificateEntity.usersByExpert = CertificateEntity.this.usersByExpert;
+            certificateEntity.date = CertificateEntity.this.date;
+            certificateEntity.paintingById = CertificateEntity.this.paintingById;
+
+            return certificateEntity;
+        }
     }
 }
