@@ -41,7 +41,8 @@ public class AuthorizationImpl implements AuthorizationService {
                 .setLogin(login)
                 .setPassword(encr)
                 .build();
-        return null;
+        registrationRepository.save(reg);
+        return reg;
     }
 
     @Transactional

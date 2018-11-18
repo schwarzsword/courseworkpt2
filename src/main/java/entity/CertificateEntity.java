@@ -12,7 +12,7 @@ import java.util.Objects;
 @EqualsAndHashCode
 public class CertificateEntity {
     private int id;
-    private Timestamp date;
+    private Timestamp date = new Timestamp(System.currentTimeMillis());
     private PaintingEntity paintingById;
     private UsersEntity usersByExpert;
 

@@ -2,6 +2,7 @@ package entities;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import config.database.DatabaseConfig;
+import entity.CertificateEntity;
 import entity.PaintingEntity;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,6 +40,8 @@ public class PaintingEntityTest {
     private String descr;
     private String img;
 
+
+    PaintingEntity paintingEntity;
     @Resource
     private JpaTransactionManager transactionManager;
 
@@ -49,11 +52,13 @@ public class PaintingEntityTest {
         author = "testauthor2";
         descr = "testDescription2";
         img = "testlink2";
-        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
+        //CertificateEntity cert = CertificateEntity.newBuilder().build();
+        paintingEntity = PaintingEntity.newBuilder()
                 .setName(name)
                 .setAuthor(author)
                 .setDescription(descr)
                 .setImg(img)
+                //.setCertificate(cert)
                 .build();
         paintingRepository.save(paintingEntity);
 
@@ -86,6 +91,10 @@ public class PaintingEntityTest {
 
 
         entityManager.getTransaction().begin();
+        paintingEntity = PaintingEntity.newBuilder()
+                .setDescription("LOLOLLO")
+                .build();
+
 
         try{
             PaintingEntity paintDB = paintingRepository.findById(1).get();
