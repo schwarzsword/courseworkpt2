@@ -28,19 +28,19 @@ public class DealingImpl implements DealingService {
 
     @Transactional
     @Override
-    public PaymentEntity regPayment(long sum, WalletEntity seller, WalletEntity buyer) {
+    public PaymentEntity regPayment(long sum, WalletEntity seller, WalletEntity customer) {
         PaymentEntity newPayment = null;
-        if(buyer.getBalance()>=sum){
+        if(customer.getBalance()>=sum){
             newPayment = PaymentEntity.newBuilder()
-                    .setSourceWallet(buyer)
+                    .setSourceWallet(customer)
                     .setDestinationWallet(seller)
                     .setSum(sum)
                     .build();
 
             seller.setBalance(seller.getBalance()+sum);
-            buyer.setBalance(buyer.getBalance()-sum);
+            customer.setBalance(customer.getBalance()-sum);
             walletRepository.save(seller);
-            walletRepository.save(buyer);
+            walletRepository.save(customer);
         }
 
         return newPayment;

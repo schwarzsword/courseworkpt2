@@ -8,7 +8,6 @@ import entity.UsersEntity;
 import java.sql.Timestamp;
 
 public interface AddLotService {
-    public LotEntity setLot(PaintingEntity painting, Timestamp start_date, Long start_price, UsersEntity seller);
     /**
      * Returns LotEntity instance with filled fields that deployed into database
      * <p>
@@ -17,8 +16,11 @@ public interface AddLotService {
      * Includes instance of PaintingEntity
      *
      * @param  painting  painting as object of auction
+     * @param seller User, who sells this painting
+     * @param start_date the starting date of selling
+     * @param start_price the starting price of lot
      * @return      Ready to use lotEntity object
      */
-    LotEntity setLot(PaintingEntity painting); //TODO set lot's fields, set state on admin;
+    LotEntity setLot(PaintingEntity painting, Timestamp start_date, Long start_price, UsersEntity seller);
 
 }

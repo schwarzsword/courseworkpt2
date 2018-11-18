@@ -36,8 +36,13 @@ public interface AuthorizationService {
      * Contains registration information to authorisation
      *
      * @param  registrationEntity needed to identify user
+     * @param   mail Email of user, stated on registration page
+     * @param name User`s name
+     * @param surname Users` surname
+     * @param phone User`s phone number
+     * @param role User`s role (admin, ordinary user etc.)
      * @return      Ready to use user's data
      */
-    UsersEntity setNewUser(RegistrationEntity registrationEntity);
+    UsersEntity setNewUser(RegistrationEntity registrationEntity, String mail, String name, String surname, String phone, String role);
 
 }

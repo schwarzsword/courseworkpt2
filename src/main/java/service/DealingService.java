@@ -18,7 +18,7 @@ public interface DealingService {
      * @param  customer customer's wallet
      * @return     registred payment between users
      */
-    PaymentEntity regPayment(long sum, WalletEntity seller, WalletEntity customer); //TODO check if buyer has money; reg new paymentEntity
+    PaymentEntity regPayment(long sum, WalletEntity seller, WalletEntity customer);
     /**
      * Returns DealEntity with valid information
      * about deal with selling lot, date and payment info
@@ -32,6 +32,6 @@ public interface DealingService {
      * @param  user user, who will be new owner
      * @return      information about deal
      */
-    DealEntity regDeal(PaymentEntity payment, EndDateEntity date, UsersEntity user); //TODO set state in Date as true, set date in Deal, set customer
+    DealEntity regDeal(PaymentEntity payment, EndDateEntity date, UsersEntity user);
 
 }
