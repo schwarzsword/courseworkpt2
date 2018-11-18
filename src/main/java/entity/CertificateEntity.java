@@ -13,7 +13,7 @@ import java.util.Objects;
 public class CertificateEntity {
     private int id;
     private Timestamp date;
-    //private PaintingEntity paintingById;
+    private PaintingEntity paintingById;
     private UsersEntity usersByExpert;
 
     @Id
@@ -37,14 +37,14 @@ public class CertificateEntity {
         this.date = date;
     }
 
-//    @OneToOne(mappedBy = "certificateByCertificate")
-//    public PaintingEntity getPaintingById() {
-//        return paintingById;
-//    }
-//
-//    public void setPaintingById(PaintingEntity paintingById) {
-//        this.paintingById = paintingById;
-//    }
+    @OneToOne(mappedBy = "certificateByCertificate")
+    public PaintingEntity getPaintingById() {
+        return paintingById;
+    }
+
+    public void setPaintingById(PaintingEntity paintingById) {
+        this.paintingById = paintingById;
+    }
 
     @ManyToOne
     @JoinColumn(name = "expert", referencedColumnName = "id")
@@ -77,11 +77,17 @@ public class CertificateEntity {
             return this;
         }
 
+        public Builder setPainting(PaintingEntity painting){
+            CertificateEntity.this.paintingById = painting;
+            return this;
+        }
+
         public CertificateEntity build(){
             CertificateEntity certificateEntity = new CertificateEntity();
             certificateEntity.id = CertificateEntity.this.id;
             certificateEntity.usersByExpert = CertificateEntity.this.usersByExpert;
             certificateEntity.date = CertificateEntity.this.date;
+            certificateEntity.paintingById = CertificateEntity.this.paintingById;
 
             return certificateEntity;
         }
