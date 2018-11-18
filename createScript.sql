@@ -1,10 +1,3 @@
-create table painting(
-id serial primary key,
-name varchar(50),
-author varchar(50),
-description text,
-img text
-);
 
 create table registration(
 id serial primary key,
@@ -20,6 +13,21 @@ regist integer unique not null check (regist > 0) references registration(id),
 mail varchar(255) unique,
 phone varchar (20) unique,
 role varchar(6)
+);
+
+create table Certificate(
+  id serial primary key,
+  date timestamp,
+  expert integer check (expert > 0) references users(id)
+);
+
+create table painting(
+  id serial primary key,
+  name varchar(50),
+  author varchar(50),
+  description text,
+  img text,
+  certificate integer not null unique check (certificate > 0) references certificate(id)
 );
 
 create table wallet(

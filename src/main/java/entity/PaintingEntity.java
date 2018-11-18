@@ -15,7 +15,11 @@ public class PaintingEntity {
     private String description = "Description unknown";
     private String img = "Image unknown";
     private Collection<LotEntity> lotsById;
+    private SertificateEntity sertificateBySertificate;
 
+    public static Builder newBuilder(){
+        return new PaintingEntity().new Builder();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,7 +72,6 @@ public class PaintingEntity {
         this.img = img;
     }
 
-
     @OneToMany(mappedBy = "paintingByPainting")
     public Collection<LotEntity> getLotsById() {
         return lotsById;
@@ -78,8 +81,14 @@ public class PaintingEntity {
         this.lotsById = lotsById;
     }
 
-    public static Builder newBuilder(){
-        return new PaintingEntity().new Builder();
+    @OneToOne
+    @JoinColumn(name = "sertificate", referencedColumnName = "id", nullable = false)
+    public SertificateEntity getSertificateBySertificate() {
+        return sertificateBySertificate;
+    }
+
+    public void setSertificateBySertificate(SertificateEntity sertificateBySertificate) {
+        this.sertificateBySertificate = sertificateBySertificate;
     }
 
     public class Builder{
@@ -134,7 +143,4 @@ public class PaintingEntity {
 
         }
     }
-
-
-
 }
