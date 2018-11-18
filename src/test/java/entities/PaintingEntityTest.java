@@ -1,6 +1,4 @@
-package services;
-
-
+package entities;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import config.database.DatabaseConfig;
@@ -22,7 +20,6 @@ import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 
 import javax.transaction.Transactional;
-import java.util.List;
 import java.util.Objects;
 import java.lang.*;
 
@@ -43,6 +40,20 @@ public class PaintingEntityTest {
     @Before
     public void setStart(){
         this.entityManager= Objects.requireNonNull(transactionManager.getEntityManagerFactory()).createEntityManager();
+        String name = "testart2";
+        String author = "testauthor2";
+        String descr = "testDescription2";
+        String img = "testlink2";
+        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
+                .setName(name)
+                .setAuthor(author)
+                .setDescription(descr)
+                .setImg(img)
+                .build();
+        paintingRepository.save(paintingEntity);
+
+
+
     }
 
     @After
@@ -67,16 +78,7 @@ public class PaintingEntityTest {
 
     @Test
     public void testCreatePainting(){
-        String name = "testart2";
-        String author = "testauthor2";
-        String descr = "testDescription2";
-        String img = "testlink2";
-        PaintingEntity paintingEntity = PaintingEntity.newBuilder()
-                .setName(name)
-                .setAuthor(author)
-                .setDescription(descr)
-                .setImg(img)
-                .build();
+
 
         entityManager.getTransaction().begin();
 
@@ -86,8 +88,8 @@ public class PaintingEntityTest {
             toJsonAndLog(paintDB);
             log.info("_____________________________________________");
 
-            List<PaintingEntity> result =  paintingRepository.findAllByAuthor(author);
-            result.forEach(e->toJsonAndLog(e));
+            //List<PaintingEntity> result =  paintingRepository.findAllByAuthor(author);
+            //result.forEach(e->toJsonAndLog(e));
 
             log.info("_____________________________________________");
         }
