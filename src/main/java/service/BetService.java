@@ -21,7 +21,7 @@ public interface BetService {
      * about expiring betting date.
      * <p>
      * Method allows to check date.
-     * If state == true -> Lot was sold and date ready to be
+     * If state == true then Lot was sold and date ready to be
      * written into a deal
      *
      * @param  lot  lot which is checked on end

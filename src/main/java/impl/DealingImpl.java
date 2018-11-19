@@ -36,7 +36,6 @@ public class DealingImpl implements DealingService {
                     .setDestinationWallet(seller)
                     .setSum(sum)
                     .build();
-
             seller.setBalance(seller.getBalance()+sum);
             customer.setBalance(customer.getBalance()-sum);
             walletRepository.save(seller);

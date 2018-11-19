@@ -22,6 +22,7 @@ public interface AuthorizationService {
      * <p>
      * Method allows set up new registration log for user to work with.
      *
+     * @throws NoSuchAlgorithmException throws this exception(actually not)
      *
      * @param  login  User's login
      * @param   password  User's password to be encrypted

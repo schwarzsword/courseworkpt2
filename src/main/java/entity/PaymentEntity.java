@@ -3,7 +3,6 @@ package entity;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "payment", schema = "public", catalog = "s243884")

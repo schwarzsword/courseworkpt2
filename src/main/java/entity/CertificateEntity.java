@@ -4,8 +4,6 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Collection;
-import java.util.Objects;
 
 @Entity
 @Table(name = "certificate", schema = "public", catalog = "s243884")

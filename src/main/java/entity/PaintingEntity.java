@@ -2,6 +2,7 @@ package entity;
 
 import lombok.EqualsAndHashCode;
 
+
 import javax.persistence.*;
 import java.util.Collection;
 
